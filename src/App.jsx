@@ -7,20 +7,47 @@ function App() {
     <>
       
       <h1>React Core Concepts</h1>
-      <Student></Student>
+      {/* <Student></Student> */}
       <Student></Student>
       <Person></Person>
-      <Developer name='Milton' tech='Java'></Developer>
       <Developer name='Shoaib' tech='JavaScript'></Developer>
       <Developer name='Salauddin' tech='Python'></Developer>
+      <Developer name='Milton' tech='Java'></Developer>
       <Developer name='Jhonker' tech='C'></Developer>
       <Device name='Samsung' price='1,45,000'></Device>
       <Device name='Apple' price='2,50,000'></Device>
       <Device name='Xiaomi' price='90,000'></Device>
-
+      <Player name='tamim' runs='500'></Player>
+      <Player name='Jhonker' runs='600'></Player>
+      <Salami event='rojar eid' amount='20'></Salami>
+      <Salami event='graduation' ></Salami>
     </>
   )
 }
+// const {name, runs} = {{name: 'tamim', runs: '500'}}
+function Player({name, runs}){
+
+  return(
+    <div className='student'> 
+      <h2>Name: {name} </h2>
+      <p>Runs: {runs}</p>
+
+    </div>
+  )
+}
+ 
+// const {name, tech} = {name: 'Shoaib', tech: 'JavaScript'}
+function Salami({event,amount = 0}){
+return(
+  <div className='student'>
+    <p>salami for:{event} </p>
+    <p>Amount: {amount} </p>
+
+  </div>
+)
+
+}
+
 
 
 function Device (props){
@@ -39,7 +66,7 @@ function Device (props){
 }
 
 function Developer(props){
-  // console.log(props)
+  console.log(props)
   return(
     <div style={{
       border:'3px solid green',
